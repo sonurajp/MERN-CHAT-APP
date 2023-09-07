@@ -1,0 +1,5 @@
+.home-page-parent {
+  .home-tab {
+    width: clamp("auto", 15rem, "100%");
+  }
+}

@@ -5,7 +5,6 @@ import { VStack } from "@chakra-ui/layout";
 import { useState } from "react";
 import axios from "axios";
 import { useToast } from "@chakra-ui/react";
-import "./ChatPage.css";
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -14,8 +13,6 @@ const Login = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [loading, setLoading] = useState(false);
-
-  //   const { setUser } = ChatState();
 
   const submitHandler = async () => {
     setLoading(true);
@@ -51,7 +48,6 @@ const Login = () => {
         isClosable: true,
         position: "bottom",
       });
-      //   setUser(data);
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
     } catch (error) {
@@ -68,7 +64,7 @@ const Login = () => {
   };
 
   return (
-    <VStack spacing="10px" className="chat-page-parent">
+    <VStack spacing="10px">
       <FormControl id="email" isRequired>
         <FormLabel>Email Address</FormLabel>
         <Input
