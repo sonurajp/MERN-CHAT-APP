@@ -7,6 +7,7 @@ const colors = require("colors");
 const userRoutes = require("./routes/userRoutes");
 dontnev.config();
 connectDB();
+app.use(express.json());
 app.get("/", (req, res) => {
   res.send("App is running");
 });
